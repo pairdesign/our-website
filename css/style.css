@@ -1,0 +1,292 @@
+body {
+    font-family: 'Inter', serif;
+    margin: 0;
+}
+
+body.bg-pair-purple {
+    background-color: #260b8a;
+}
+
+body.bg-pair-white {
+    background-color: #F9E9EC;
+}
+
+/* Navigation Bar Properties (Mobile) */
+.nav {
+    list-style: none;
+    padding: 48px;
+    text-align: center;
+}
+
+.nav li {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #F9E9EC;
+    position: relative;
+}
+
+.nav a.purple {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #260b8a;
+    position: relative;
+}
+
+/* Text Morph Effect */
+.morphcontainer {
+    /* Makes the container a grid container */
+    display: grid;
+
+    /* Set the width and height to cover the full screen */
+    width: 100vw; /* 100% of the viewport width */
+    height: 33vh; /* 100% of the viewport height */
+
+    /* Centering the content inside the container */
+    place-items: center;
+
+    /* Ensures the text within the container is centered */
+    text-align: center;
+
+    /* Existing filter styles */
+    filter: url(#threshold) blur(0.6px);
+}
+
+#morphtext1,
+#morphtext2 {
+    color: #F9E9EC;
+    user-select: none;
+    font-weight: 900;
+    font-size: 5.35em;
+    user-select: none;
+
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+}
+
+/* Buttons */
+.button-container {
+    /* position: fixed; Fixed position */
+    left: 0;
+    right: 0; /* Stick to the bottom */
+    bottom: 0;
+    display: flex; /* Use flexbox to center the button */
+    justify-content: center; /* Center horizontally */
+    padding-bottom: 1em; /* Optional: for some spacing from the screen edge */
+    z-index: 2; /* Optional: to ensure button stays above other content */
+}
+
+.white-pill-button {
+    background-color: #F9E9EC;
+    border: none;
+    color: #260b8a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 1em;
+    padding: 1em 2em; /* Or any other comfortable proportion for mobile */
+    font-size: 1em; /* Smaller font size for mobile */
+    border-radius: 1em; /* Optional: if you want a more 'pill' look on smaller screens */
+    width: auto; /* This will make it adjust based on padding and content size */
+    text-align: center;
+}
+
+.purple-pill-button {
+    background-color: #260b8a;
+    border: none;
+    color: #F9E9EC;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 1em;
+    padding: 1em 2em; /* Or any other comfortable proportion for mobile */
+    font-size: 1em; /* Smaller font size for mobile */
+    border-radius: 1em; /* Optional: if you want a more 'pill' look on smaller screens */
+    width: 100%; /* This will make it adjust based on padding and content size */
+    text-align: center;
+}
+
+/* Services Banner */
+.purple-highlight-banner {
+    background-color: #260b8a; /* Adjust to match the exact purple shade */
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 1em;
+    padding: 1.5em; /* Adjust based on your design requirements */
+    color: #F9E9EC; /* Text color */
+}
+
+.banner-icon {
+    object-fit:contain;
+    width: 100%;
+    height: 100%;
+}
+
+/* Services Call To Action */
+.pair-cta-section {
+    padding: 1em;
+}
+
+.pair-cta-section h1 {
+    font-size: 2em;
+    color:#260b8a;    
+    text-shadow: 0 0.01em, 0.01em 0, 0.01em 0.01em;
+    font-weight: 900;
+}
+
+.pair-cta-section p {
+    font-size: 1.25em;
+    font-weight: 400;
+    color:#260b8a;
+}
+
+/* Services Grid */
+.pair-services-grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* This creates a single column layout */
+    gap: 1em; /* Adjust this value for space between grid items */
+    padding: 1em;
+}
+
+.pair-services-grid-container li {
+    font-size: 1.25em;
+    font-weight: 400;
+    color:#260b8a;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.pair-services-grid-container p {
+    font-size: 1.25em;
+    font-weight: 400;
+    color:#260b8a;
+}
+
+/* Services Styles for desktop view */
+@media (min-width: 768px) { /* This breakpoint can be adjusted based on your preference */
+    .pair-services-grid-container {
+        grid-template-columns: 1fr 1fr; /* This creates a two column layout */
+    }
+}
+
+/* About Page */
+/* About Grid */
+.about-pair-grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* This creates a single column layout */
+    gap: 1em; /* Adjust this value for space between grid items */
+    padding: 1em;
+}
+
+.about-pair-grid-container h1 {
+    font-size: 2em;
+    color: #f61f35;    
+    text-shadow: 0 0.01em, 0.01em 0, 0.01em 0.01em;
+    font-weight: 900;
+}
+
+.about-pair-grid-container p {
+    font-size: 1.25em;
+    font-weight: 400;
+    color:#f61f35;
+}
+
+@media (min-width: 768px) { /* This breakpoint can be adjusted based on your preference */
+    .about-pair-grid-container {
+        grid-template-columns: 1fr 1fr; /* This creates a two column layout */
+    }
+}
+
+.about-pair-people-grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* This creates a single column layout */
+    gap: 1em; /* Adjust this value for space between grid items */
+    padding: 1em;
+    background-color: #260b8a;
+}
+
+.about-pair-people-grid-container h1 {
+    font-size: 2em;
+    color: #F9E9EC;    
+    text-shadow: 0 0.01em, 0.01em 0, 0.01em 0.01em;
+    font-weight: 900;
+}
+
+.about-pair-people-grid-container p {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #F9E9EC;
+}
+
+@media (min-width: 768px) { /* This breakpoint can be adjusted based on your preference */
+    .about-pair-people-grid-container {
+        grid-template-columns: 1fr 1fr; /* This creates a two column layout */
+    }
+}
+
+/* Profile Icon */
+.circle-image {
+    width: 66%;            /* Width of the image */
+    height: auto;           /* Height of the image */
+    border-radius: 50%;      /* Makes the image round */
+    border: 0.5em solid #F9E9EC; /* White border around the image */
+    overflow: hidden;        /* Ensures any part of the image outside the circle is hidden */
+    object-fit: cover;       /* Ensures the image covers the whole space */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.cherry-image {
+    width: 50%;            /* Width of the image */
+    height: auto;           /* Height of the image */
+    object-fit: cover;       /* Ensures the image covers the whole space */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-button-container {
+    padding: 1em;
+}
+
+.cherry-contact-us-button {
+    background-color: #f61f35;
+    border: none;
+    color: #F9E9EC;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 1em;
+    padding: 1em 2em; /* Or any other comfortable proportion for mobile */
+    font-size: 1em; /* Smaller font size for mobile */
+    border-radius: 1em; /* Optional: if you want a more 'pill' look on smaller screens */
+    width: 100%; /* This will make it adjust based on padding and content size */
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 1em;
+    color: #F9E9EC;
+}
+
+footer.purple-footer {
+    text-align: center;
+    font-size: 1em;
+    color: #260b8a;
+}

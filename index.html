@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, intial-scale=1" name="viewport" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Pair 🍒</title>
+    </head>
+    <body class="bg-pair-purple">
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/about.html">About</a></li>
+            <li><a href="html/services.html">Services</a></li>
+        </ul>
+        <div class="morphcontainer">
+            <span id="morphtext1"></span>
+            <span id="morphtext2"></span>
+        </div>
+        
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="button-container">
+            <!-- TOOD: Link this to calendy instead -->
+            <button class="white-pill-button" onclick="location.href='mailto:vedant@pair.design';">Contact Us</button>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Pair</p>
+        </footer>
+    </body>
+
+    <script src="js/morph.js"></script>
+</html>
